@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home
+{% endblock %}
+
+{% block main %}
+<div style = "text-align: center;">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Request id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Help type</th>
+      <th scope="col">City</th>
+      <th scope="col">Phone number</th>
+      <th scope="col">Date asked for help</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for row in rows %}
+            <tr>
+                <td> {{ row["id"] }} </td>
+                <td> {{ row["name"] }} </td>
+                <td> {{ row["help_type"] }} </td>
+                <td> {{ row["city"] }} </td>
+                <td> {{ row["phone"] }} </td>
+                <td> {{ row["date"] }} </td>
+            </tr>
+        {% endfor %}
+        {% for row in rows2 %}
+            <tr>
+                <td> {{ row["id"] }} </td>
+                <td> {{ row["name"] }} </td>
+                <td> {{ row["help_type"] }} </td>
+                <td> {{ row["city"] }} </td>
+                <td> {{ row["phone"] }} </td>
+                <td> {{ row["date"] }} </td>
+            </tr>
+        {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

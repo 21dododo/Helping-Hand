@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password*" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="v-password" placeholder="Verify Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="f-name" placeholder="First Name" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="l-name" placeholder="Last Name" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="area" placeholder="Area(Center/South/North)" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="city" placeholder="City" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="phone" placeholder="Phone number" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+    <h6 style = "text-align: center; padding-top: 30px;"> *password must be at least 6 symbols long and must
+     include both letters and numbers</h6>
+{% endblock %}

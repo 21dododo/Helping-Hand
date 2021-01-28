@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h4 style = "padding-bottom: 40px;">Report the details of the request you helped in, so nobody will see it again</h4>
+    <form action="/report" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="request" placeholder="Request id" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="name of the person in need" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Report</button>
+    </form>
+{% endblock %}
